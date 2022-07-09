@@ -1,0 +1,46 @@
+body{
+  display: flex;
+  user-select: none;
+}
+
+#inventory {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 75px auto;
+  width: 800px;
+}
+
+#text{
+  color: green;
+}
+
+#lock {
+  font-size: 12;
+  background-color: transparent;
+  margin-right: 15px;
+  border-radius: 2px;
+  align-self: center;
+}
+
+#temp {
+  align-self: center;
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.num {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.unlockClass {
+  -webkit-app-region: drag;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lockClass {
+  -webkit-app-region: no-drag;
+}

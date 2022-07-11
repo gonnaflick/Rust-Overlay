@@ -34,11 +34,9 @@ function createChildWindow() {
     modal: true,
     show: false,
     transparent: true,
-    alwaysOnTop: true,
     resizable: false,
     frame: false,
     autoHideMenuBar: true,
-    parent: mainWindow, // Make sure to add parent window here
 
     // Make sure to add webPreferences with below configuration
     webPreferences: {

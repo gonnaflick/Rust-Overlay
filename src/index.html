@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <title>Rust Inventory</title>
@@ -8,17 +9,48 @@
 </head>
 
 <body>
-  <div id="inventory" class="unlockClass">
-    <span class="num">1</span>
-    <span class="num">2</span>
-    <span class="num">3</span>
-    <span class="num">4</span>
-    <span class="num">5</span>
-    <span class="num">6</span>
-    <button id="lock" class="lockClass" onclick="myFunction()"><i id="text" class=" fas fa-lock-open"></i></button>
-    <span id="temp">Drag unlocked</span>
+  <div id="containerAll">
+    <div id="containerIT" class="unlockStatus">
+      <div id="containerI">
+        <div id="container1" class="containerN">
+          <span id="1" class="num">1</span>
+        </div>
+        <div id="container2" class="containerN">
+          <span id="2" class="num">2</span>
+        </div>
+        <div id="container3" class="containerN">
+          <span id="3" class="num">3</span>
+        </div>
+        <div id="container4" class="containerN">
+          <span id="4" class="num">4</span>
+        </div>
+        <div id="container5" class="containerN">
+          <span id="5" class="num">5</span>
+        </div>
+        <div id="container6" class="containerN">
+          <span id="6" class="num">6</span>
+        </div>
+      </div>
+      <div id="containerT">
+        <button id="buttonC" class="buttonT unlockButton" tabindex="-1" onclick="closeMainWindow()">&#x2715</button>
+        <button id="buttonS" class="buttonT unlockButton" tabindex="-1" onclick="goToSettingsWindow()">&#9881</button>
+        <button id="buttonD" class="buttonT unlockButton unlockbuttonD" tabindex="-1" onclick="dragStatus()">
+          <i id="iconD" class="fas fa-lock-open"></i>
+        </button>
+      </div>
+    </div>
+    <div id="containerD" class="unlockStatus">
+      <span id="textA">Created by: GonnaFlick.</span>
+      <span id="textD">Drag unlocked</span>
+    </div>
   </div>
   <script src="./logic.js" defer></script>
+  <script src="./renderer.js" defer></script>
+  <script>
+    setInterval(function() {
+      readFile();
+    }, 1000);
+  </script>
 </body>
 
 </html>

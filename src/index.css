@@ -1,46 +1,142 @@
-body{
+body {
   display: flex;
   user-select: none;
 }
 
-#inventory {
+#containerAll {
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 75px auto;
-  width: 800px;
+  width: 605px;
+  height: 115px;
+  border: 2px solid rgb(0, 0, 0);
+  -webkit-app-region: drag;
+}
+#containerIT{
+  display: grid;
+  grid-template-columns: 570px 30px;
+  width: 605px;
+  height: 90px;
+  column-gap: 5px;
 }
 
-#text{
-  color: green;
+#containerT {
+  margin-top: 2px;
+  display: grid;
+  width: 20px;
+  height: 20px;
+  grid-row-gap: 5px;
 }
 
-#lock {
-  font-size: 12;
-  background-color: transparent;
-  margin-right: 15px;
-  border-radius: 2px;
-  align-self: center;
+#containerD{
+  display: grid;
+  grid-template-columns: 450px 150px;
+  height: 25px;
 }
 
-#temp {
-  align-self: center;
-  color: green;
-  font-size: 14px;
-  font-weight: bold;
+#containerI {
+  display: grid;
+  grid-template-columns: 90px 90px 90px 90px 90px 90px;
+  width: 570px;
+  height: 90px;
+  column-gap: 6px;
+}
+
+.containerN {
+  border: 1px solid rgb(0, 255, 0);
+}
+
+#iconD {
+  font-size: 10px;
+  color: white;
+}
+#textD{
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+  text-align: end;
+  margin-top: 5px;
+  margin-right: 6px;
+}
+#textA{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  color: rgb(97, 97, 97);
+  margin: 8px 0 0 4px;
 }
 
 .num {
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  float: right;
+  margin: 4px;
+  padding: 2px 4px 2px 4px;
 }
-
-.unlockClass {
-  -webkit-app-region: drag;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.lockClass {
+.buttonT{
+  color: #dbdbdb;
+  font-size: 16px;
+  background-color: #222222;
+  transition: box-shadow .3s;
+  border-radius: 25px;
+  border: 0px solid white;
   -webkit-app-region: no-drag;
+}
+
+#buttonC:hover {
+  background-color: rgb(255, 79, 79);
+}
+#buttonS:hover {
+  background-color: rgb(107, 107, 107);
+}
+.buttonT:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+}
+#buttonC:active {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0 0 5px rgb(255, 0, 0);
+}
+#buttonS:active {
+  background-color: rgb(20, 20, 20);
+  box-shadow: 0 0 5px rgb(20, 20, 20);
+}
+
+/*
+STATUS OF BUTONS AND DIVS
+*/
+.lockbuttonD:focus {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0 0 5px rgb(255, 0, 0);
+}
+.unlockbuttonD:focus {
+  background-color: rgb(0, 255, 0);
+  box-shadow: 0 0 5px rgb(0, 255, 0);
+}
+.lockbuttonD:hover{
+  background-color: rgb(255, 79, 79);
+  box-shadow: 0 0 5px rgb(255, 79, 79);
+}
+.unlockbuttonD:hover{
+  background-color: rgb(85, 255, 85);
+  box-shadow: 0 0 5px rgb(85, 255, 85);
+}
+.unlockStatus {
+  -webkit-app-region: drag;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lockStatus {
+  -webkit-app-region: no-drag;
+  background: rgba(0, 0, 0, 0.0);
+}
+
+.unlockButton {
+  pointer-events: all;
+  color: white;
+}
+
+.lockButton {
+  pointer-events: none;
+  color: black;
 }

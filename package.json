@@ -12,7 +12,10 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author": "schnippen",
+  "author": {
+    "name": "gonnaflick",
+    "email": "a338906@uach.mx"
+  },
   "license": "MIT",
   "config": {
     "forge": {

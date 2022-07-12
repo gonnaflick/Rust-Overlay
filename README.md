@@ -4,7 +4,7 @@
 
 ## General info
 This is a simple overlay for rust inventory numeration, it's purpose is only as a practice project for external overlays. It is implemented using Electron.
-## Instrucciones
+## Instructions
 At this moment, the only way to run the overlay is by installing node.js and electron. In the future I'll make an installation build for Windows 10 since it is my main OS for deployment. 
 1. Clone the repository.
 ```

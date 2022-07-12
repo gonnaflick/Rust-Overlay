@@ -12,7 +12,7 @@ body {
 }
 #containerIT{
   display: grid;
-  grid-template-columns: 570px 30px;
+  grid-template-columns: 575px 30px;
   width: 605px;
   height: 90px;
   column-gap: 5px;
@@ -21,15 +21,16 @@ body {
 #containerT {
   margin-top: 2px;
   display: grid;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   grid-row-gap: 5px;
 }
 
 #containerD{
   display: grid;
-  grid-template-columns: 450px 150px;
+  grid-template-columns: 289px 289px;
   height: 25px;
+  width: 605px;
 }
 
 #containerI {
@@ -44,10 +45,6 @@ body {
   border: 1px solid rgb(0, 255, 0);
 }
 
-#iconD {
-  font-size: 10px;
-  color: white;
-}
 #textD{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -61,7 +58,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-style: italic;
-  color: rgb(97, 97, 97);
+  color: rgb(0, 0, 0);
   margin: 8px 0 0 4px;
 }
 
@@ -76,19 +73,26 @@ body {
 }
 .buttonT{
   color: #dbdbdb;
-  font-size: 16px;
+  font-size: 12px;
+  width: 22px;
+  height: 22px;
   background-color: #222222;
   transition: box-shadow .3s;
   border-radius: 25px;
   border: 0px solid white;
   -webkit-app-region: no-drag;
+  outline: none;
+  text-align: center;
+  vertical-align: center;
 }
 
-#buttonC:hover {
+#buttonC:hover, #buttonC:focus{
   background-color: rgb(255, 79, 79);
+  box-shadow: 0 0 5px rgb(255, 79, 79);
 }
-#buttonS:hover {
+#buttonS:hover, #buttonS:focus {
   background-color: rgb(107, 107, 107);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 1);
 }
 .buttonT:hover {
   box-shadow: 0 0 5px rgba(255, 255, 255, 1);
@@ -105,38 +109,30 @@ body {
 /*
 STATUS OF BUTONS AND DIVS
 */
-.lockbuttonD:focus {
+.unlockbuttonD:focus {
   background-color: rgb(255, 0, 0);
   box-shadow: 0 0 5px rgb(255, 0, 0);
+  outline: 1px solid rgb(255, 255, 255);
 }
-.unlockbuttonD:focus {
+.lockbuttonD:focus {
   background-color: rgb(0, 255, 0);
   box-shadow: 0 0 5px rgb(0, 255, 0);
-}
-.lockbuttonD:hover{
+  outline: 1px solid rgb(255, 255, 255);
+} 
+.unlockbuttonD:hover{
   background-color: rgb(255, 79, 79);
   box-shadow: 0 0 5px rgb(255, 79, 79);
 }
-.unlockbuttonD:hover{
+.lockbuttonD:hover{
   background-color: rgb(85, 255, 85);
   box-shadow: 0 0 5px rgb(85, 255, 85);
 }
 .unlockStatus {
   -webkit-app-region: drag;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .lockStatus {
   -webkit-app-region: no-drag;
   background: rgba(0, 0, 0, 0.0);
-}
-
-.unlockButton {
-  pointer-events: all;
-  color: white;
-}
-
-.lockButton {
-  pointer-events: none;
-  color: black;
 }

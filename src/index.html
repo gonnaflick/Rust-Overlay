@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <title>Rust Inventory</title>
   <link rel="stylesheet" href="index.css" />
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 
 <body>
@@ -32,19 +31,16 @@
         </div>
       </div>
       <div id="containerT">
-        <button id="buttonC" class="buttonT unlockButton" tabindex="-1" onclick="closeMainWindow()">&#x2715</button>
-        <button id="buttonS" class="buttonT unlockButton" tabindex="-1" onclick="goToSettingsWindow()">&#9881</button>
-        <button id="buttonD" class="buttonT unlockButton unlockbuttonD" tabindex="-1" onclick="dragStatus()">
-          <i id="iconD" class="fas fa-lock-open"></i>
-        </button>
+        <button id="buttonC" class="buttonT" onclick="closeMainWindow()">&#x2715</button>
+        <button id="buttonS" class="buttonT" onclick="goToSettingsWindow()">&#9881</button>
+        <button id="buttonD" class="buttonT unlockbuttonD" onclick="dragStatus()">&#128274;&#xFE0E;</button>
       </div>
     </div>
     <div id="containerD" class="unlockStatus">
-      <span id="textA">Created by: GonnaFlick.</span>
+      <span id="textA">Created by: GonnaFlick. V1.0.</span>
       <span id="textD">Drag unlocked</span>
     </div>
   </div>
-  <script src="./logic.js" defer></script>
   <script src="./renderer.js" defer></script>
   <script>
     setInterval(function() {

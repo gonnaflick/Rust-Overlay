@@ -18,10 +18,6 @@ function createWindow() {
     },
   });
 
-  const {ipcMain} = require('electron')
-  ipcMain.on('close-me', (evt, arg) => {
-    app.quit()
-  })
   mainWindow.setAlwaysOnTop(true, 'screen');
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 }
@@ -29,14 +25,16 @@ function createWindow() {
 // Function to create child window of parent one
 function createChildWindow() {
   childWindow = new BrowserWindow({
+    center: true,
     width: 430,
     height: 550,
     modal: true,
-    show: false,
+    show: false,      
     transparent: true,
     resizable: false,
     frame: false,
     autoHideMenuBar: true,
+    parent: mainWindow,
 
     // Make sure to add webPreferences with below configuration
     webPreferences: {
@@ -62,6 +60,17 @@ childWindow.on('request-update-prgb', (event, arg) => {
 });
 }
 
+ipcMain.on('close-me', (evt, arg) => {
+  app.quit()
+})
+
+ipcMain.on('mouseLock', (evt, arg) => {
+  mainWindow.setIgnoreMouseEvents(true);
+})
+
+ipcMain.on('mouseUnlock', (evt, arg) => {
+  mainWindow.setIgnoreMouseEvents(false);
+})
 
 ipcMain.on("openChildWindow", (event, arg) => {
   createChildWindow();

@@ -1,5 +1,4 @@
 const fs = require('fs');
-const electron = require('electron')
 const ipc = window.require('electron').ipcRenderer;
 var path = require('path');
 

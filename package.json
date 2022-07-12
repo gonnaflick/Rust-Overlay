@@ -1,22 +1,25 @@
 {
   "name": "rust-overlay",
-  "productName": "rust-overlay",
+  "productName": "Rust Overlay",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Overlay for Rust.",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
-    "package": "electron-forge package",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . rust-overlay --overwrite  --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Rust Overlay\"",
+    "package-linux": "electron-packager . rust-overlay --overwrite  --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "extraResources": "/resources/profile.json"
   },
   "keywords": [],
   "author": {
     "name": "gonnaflick",
     "email": "a338906@uach.mx"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "config": {
     "forge": {
       "packagerConfig": {},
@@ -53,6 +56,6 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.64",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.64",
     "@electron-forge/maker-zip": "^6.0.0-beta.64",
-    "electron": "19.0.8"
+    "electron": "^19.0.8"
   }
 }

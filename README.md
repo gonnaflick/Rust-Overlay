@@ -1,6 +1,7 @@
 # Rust Overlay
 * [General info](#general-info)
 * [Instructions](#instructions)
+* [Sources](#sources)
 
 ## General info
 This is a simple overlay for rust inventory numeration, it's purpose is only as a practice project for external overlays. It is implemented using Electron.
@@ -22,3 +23,11 @@ $ npm start
 * **Close:** closes the program. This also applies for the settings menu.
 * **Settings:** Opens a child window that provides you with options to change the padding and color of the inventory. When you save your settings you will create a profile, this profile will always be loaded in the mainWindow, so you can keep your changes saved. In the case of the settings, the implementation is still needed so it will appear always with the default values.
 * **Drag lock:** This is the option that will lock and unlock the overlay. When unlocked, you can drag the inventory to any place you want and select any option you want in the overlay `Use the green boxes as a guide to know if the overlay measures the same as the inventory`. Once locked, the overlay will become transparent and mouse input will no longer be recorded by the overlay. At this moment, the only way to interact with the overlay when locking is by opening the overlay and `tab`ing the options previously mentioned. Once you choose agan the drag lock, press enter and mouse input will be accepted again. `This will change in the future, at the moment it is the only way to interact with the overlay.`
+
+## Sources
+* https://www.christianengvall.se/electron-packager-tutorial/
+* https://www.christianengvall.se/electron-windows-installer/
+* https://ourcodeworld.com/articles/read/927/how-to-create-a-msi-installer-in-windows-for-an-electron-framework-application
+* https://www.youtube.com/watch?v=zWuuk_j1iwM&list=LL&index=4&t=587s
+* https://github.com/felixrieseberg/electron-wix-msi
+* https://www.youtube.com/watch?v=KDVahubc_54
